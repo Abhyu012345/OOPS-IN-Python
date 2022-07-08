@@ -1,0 +1,28 @@
+methods are nothing but simply the functions inside the class.
+
+# class is made
+class personal_details:
+    
+    '''This is a docstring which simply states what bthe class is about'''
+    '''For an example this class contains details of a person.'''
+    
+    name = "abhyudaya"  # These are class attributes
+    age = 18
+    
+    def __init__(self,girlfriend): # For instance attributes we have to call init function
+        self.girlfriend = girlfriend # gf is a instance attribute
+        
+    # instance method
+    
+    def printing(self, car, aging):
+        self.aging = aging
+        if aging >= self.age:
+            self.car = car
+            print((self.name).capitalize(), "is gifting",car,"to", self.girlfriend)
+        else:
+            print("sorry",self.girlfriend,"Your age is little smaller")
+    
+obj = personal_details("Hema")
+obj.printing("Mercedes", 17)
+obj1 = personal_details("Pushpha")
+obj1.printing("Lamborgini", 18)
