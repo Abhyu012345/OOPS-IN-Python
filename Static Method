@@ -1,0 +1,23 @@
+# class is made
+class personal_details:
+    
+    '''This is a docstring which simply states what bthe class is about'''
+    '''For an example this class contains details of a person.'''
+    
+    name = "abhyudaya"  # These are class attributes
+    age = 18
+    
+    def __init__(self,girlfriend): # For instance attributes we have to call init function
+        self.girlfriend = girlfriend # gf is a instance attribute
+        
+    # static method
+    
+    @staticmethod      
+    # This can be used for any function making but can't use for self parameter purposes                
+    # this is completely idel not related to instances.
+    def s_to_i(string):
+        j = int(string)
+        return j
+        
+    himi = obj.s_to_i("10")
+    print(himi)
