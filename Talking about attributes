@@ -1,0 +1,36 @@
+simply speaking attributes are nothing but the variables but of the class.
+two types of attributes 
+a. Class              =   Which will be same for all objects or all instances.
+b. Instance/Object    =   Which are different for each and every object or instance.
+
+# class is made
+class personal_details:
+    
+    '''This is a docstring which simply states what bthe class is about'''
+    '''For an example this class contains details of a person.'''
+    
+    name = "abhyudaya"  # These are class attributes
+    age = 14
+    
+    def __init__(self,girlfriend): # For instance attributes we have to call init function
+        self.girlfriend = girlfriend # gf is a instance attribute
+
+'''Simply speaking init function is automatically called when an object is created for a class.
+   it is used to assign values to an attribut for every instance.
+   self is nothing but a parameter that is used to call varibles of a class
+   inside a class. and maintains different value for diff instances.'''
+    
+# object creation
+obj = personal_details("hema")
+obj1 = personal_details("puspha")
+print((obj.name).capitalize())
+print(obj1.name)
+print(obj.girlfriend)
+print(obj1.girlfriend)
+# for different objects same name is printing this is class attribute.
+# but each object is printing diff gf names as this is instancve attribute.
+
+# if u wan tu can change the value of name for a partucular instance but for els eit will be same as alwys.
+obj.name = "Abhi"
+print(obj.name)
+print(obj1.name)
