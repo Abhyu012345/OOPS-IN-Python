@@ -1,0 +1,10 @@
+# class is made
+class personal_details:
+    '''This is a docstring which simply states what bthe class is about'''
+    '''For an example this class contains details of a person.'''
+    name = "abhyudaya"
+    age = 14
+# object creation
+obj = personal_details()
+print((obj.name).capitalize())
+print(obj.age)
