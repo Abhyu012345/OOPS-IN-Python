@@ -1,0 +1,1 @@
+Class Method is simply a function in which you have to pass an parameter cls, and it is the function which will give us the object.
