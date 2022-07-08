@@ -1,1 +1,35 @@
 Class Method is simply a function in which you have to pass an parameter cls, and it is the function which will give us the object.
+
+# class is made
+class personal_details:
+    
+    '''This is a docstring which simply states what bthe class is about'''
+    '''For an example this class contains details of a person.'''
+    
+    name = "abhyudaya"  # These are class attributes
+    age = 18
+    
+    def __init__(self,girlfriend): # For instance attributes we have to call init function
+        self.girlfriend = girlfriend # gf is a instance attribute
+     
+    # Instance Method   
+    def printing(self, car, aging):
+        self.aging = aging
+        if aging >= self.age:
+            self.car = car
+            print((self.name).capitalize(), "is gifting",car,"to", self.girlfriend)
+        else:
+            print("sorry",self.girlfriend,"Your age is little smaller")
+        
+    # class Method
+        
+    # Factory method
+    @classmethod
+    
+    def getting_attr(cls,string):
+        girlfriend = string
+        return personal_details(girlfriend)
+
+obj = personal_details.getting_attr("Hema")
+print(obj.__dict__)
+obj.printing("BMW", 19)
