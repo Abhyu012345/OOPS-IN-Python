@@ -1,3 +1,5 @@
+Static method is used when we dont wnat to call self parameter
+
 # class is made
 class personal_details:
     
