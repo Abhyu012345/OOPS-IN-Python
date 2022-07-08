@@ -1,0 +1,49 @@
+Public attributes are by default
+Private we have to make by putting underscores as given by me in the below examples.
+
+# class is made
+class personal_details:
+    
+    '''This is a docstring which simply states what bthe class is about'''
+    '''For an example this class contains details of a person.'''
+    
+    name = "abhyudaya"  # These are class attributes
+    age = 18
+    
+    def __init__(self,girlfriend): # For instance attributes we have to call init function
+    
+    # Private Attribute (Cant accesible outside class like public attributes.)
+        self.__girlfriend = girlfriend # gf is a instance attribute
+     
+    # Instance Method  
+    # Private Method
+    def __printing(self, car, aging):
+        self.aging = aging
+        if aging >= self.age:
+            self.car = car
+            print((self.name).capitalize(), "is gifting",car,"to", self.__girlfriend)
+            # here also we have seen that we have to use underscore as we want to access 
+            # private attribute insde the class.
+        else:
+            print("sorry",self.__girlfriend,"Your age is little smaller")
+        
+    # class Method
+        
+    # Factory method
+    @classmethod
+    
+    def getting_attr(cls,string):
+        girlfriend = string
+        return personal_details(girlfriend)
+
+obj = personal_details("Hema")
+print(obj.__dict__)  # We can easily print whole dictionary but not with that private attribute.
+
+# But now also if we have to access the private attribute
+
+print(obj._personal_details__girlfriend)
+
+# Now lets call the private method
+
+''' There is no other way to call that method but their is the way out'''
+print(obj._personal_details__printing('Mercedes', 19))
